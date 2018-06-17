@@ -1,0 +1,25 @@
+{
+  "name": "blaze-vue-snippets",
+  "displayName": "Blaze-vue snippets",
+  "description": "Code snippets for the Blaze-vue component Library",
+  "version": "0.0.1",
+  "publisher": "ZainWania",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/ZainW/blaze-snippets.git"
+  },
+  "engines": {
+    "vscode": "^1.24.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "vue-html",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}

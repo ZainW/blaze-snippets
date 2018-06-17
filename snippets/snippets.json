@@ -1,0 +1,150 @@
+{
+  "Blaze Button": {
+    "prefix": "aoButton",
+    "body": [
+      "<ao-button", 
+      "\tprimary", 
+      "\t@click.native=${1:event}", 
+      ">", 
+      "\t{{${2:text}}}",
+      "<\/ao-button>"
+    ],
+    "description": "Button component"
+  },
+  "Blaze Section Header": {
+    "prefix": "aoSectionHeader",
+    "body": [
+      "<ao-section-header",
+      "\t:title\"${1:title}\"",
+      "\t:icon-class=\"'${2:iconClass}'\"",
+      "\t:subtitle=\"'${3:text}'\"",
+      ">",
+      "<\/ao-section-header>"
+
+    ],
+    "description": "Section Header component"
+  },
+  "Blaze Navbar": {
+    "prefix": "aoNavbar",
+    "body": [
+      "<ao-navebar slot=\"section-header-navbar\"",
+      "\t<li",
+      "\t\tv-for=\"route in routes\"",
+      "\t\t:key=\"route.path\">",
+      "\t\t<router-link :to=\"route.path\">{{route.name}}<\/router-link>",
+      "\t<\/li>",
+      "<\/ao-navbar>"
+    ],
+    "description": "Button component"
+  },
+  "Blaze Card": {
+    "prefix": "aoCard",
+    "body": [
+      "<ao-card :title=\"'${1:text}'\">",
+      "<\/ao-card>"
+    ],
+    "description": "Card component"
+  },
+  "Blaze text-styled": {
+    "prefix": "aoTextStyle",
+    "body": [
+      "<ao-text-style",
+      "\t${2:success or error}>",
+      "\t${1:text}",
+      "<\/ao-text-style>"
+    ],
+    "description": "Special text styling component"
+  },
+  "Blaze Input": {
+    "prefix": "aoInput",
+    "body": [
+      "<ao-input",
+      "\tv-model=\"${1:myVar}\"",
+      "\t:type=\"'text'\"",
+      "\t:label=\"'${2:label}'\"",
+      "\/>"
+    ],
+    "description": "Input component"
+  },
+  "Blaze Checkbox": {
+    "prefix": "aoCheckbox",
+    "body": [
+      "<ao-checkbox",
+      "\tv-model=\"${1:myVar}\"",
+      "\t:checkbox-label=\"'${2:value}'\"",
+      "\t:checkbox-value=\"'${2:value}'\"",
+      "\/>"
+    ],
+    "description": "checkbox component"
+  },
+  "Blaze info pair": {
+    "prefix": "aoInfoPair",
+    "body": [
+      "<ao-info-pair :label=\"'${1:label}'\">",
+      "\t<p>${2:text}<\/p>",
+      "<\/ao-info-pair>"
+    ],
+    "description": "label and text component"
+  },
+  "Blaze Text Area": {
+    "prefix": "aoTextArea",
+    "body": [
+      "<ao-text-area v-model=\"${1:myVar}\"\/>"
+    ],
+    "description": "Textarea component"
+  },
+  "Blaze Paginate": {
+    "prefix": "aoPaginate",
+    "body": [
+      "<ao-paginate",
+      "\t:total-pages=\"${1:num}\"",
+      "\t@paginate=\"@{2:method}\"",
+      "<\/ao-paginate>"
+    ],
+    "description": "Pagination Buttons"
+  },
+  "Blaze Table": {
+    "prefix": "aoTable",
+    "body": [
+      "<ao-table",
+      "\t:headers=\"${1:headerCollection}\"",
+      "\t@sortTable=\"${2:sortTable}\"",
+      "\tis-clickable",
+      "\t<tr",
+      "\t\tv-for=\"${3:thing} in ${3:thing}s\"",
+      "\t\t:key=\"${3:thing}.${4:id}\">",
+      "\t\t<td>${3:thing}.${5:value}<\/td>",
+      "\t<\/tr>",
+      "<\/ao-table>"
+    ],
+    "description": "Table component"
+  },
+  "Blaze Modal": {
+    "prefix": "aoModal",
+    "body": [
+      "<ao-modal",
+      "\tv-if=\"${1:showBool}\"",
+      "\t:size=\"'md'\">",
+      "\t@modalClose=\"${2:toggleModal}\">",
+      "\t<div slot=\"modal-header\">",
+      "\t\t<h2>${3:title}</h2>",
+      "\t<\/div>",
+      "\t<div slot=\"modal-body\">",
+      "\t\t<p>content</p>",
+      "\t<\/div>",
+      "\t<div slot=\"modal-footer\">",
+      "\t\t<ao-button",
+      "\t\t\t@click.native=\"${2:toggleModal}\">",
+      "\t\t\t${4:cancel}",
+      "\t\t<\/ao-button>",
+      "\t\t<ao-button",
+      "\t\t\tprimary",
+      "\t\t\t@click.native=\"${2:toggleModal}\">",
+      "\t\t\t${5:ok}",
+      "\t\t<\/ao-button>",
+      "\t<\/div>",
+      "<\/ao-modal>"
+    ],
+    "description": "Modal component"
+  }
+}
